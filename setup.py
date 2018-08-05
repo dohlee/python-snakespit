@@ -26,11 +26,13 @@ setup(
     name='snakespit',
     version='0.1.0',
     license='MIT license',
-    description='Get snakemke rules with ease.',
-    long_description='%s\n%s' % (
-        re.compile('^.. start-badges.*^.. end-badges', re.M | re.S).sub('', read('README.rst')),
-        re.sub(':[a-z]+:`~?(.*?)`', r'``\1``', read('CHANGELOG.rst'))
-    ),
+    description='Get snakemke template rules with ease.',
+    # long_description='%s\n%s' % (
+    #     re.compile('^.. start-badges.*^.. end-badges', re.M | re.S).sub('', read('README.rst')),
+    #     re.sub(':[a-z]+:`~?(.*?)`', r'``\1``', read('CHANGELOG.rst'))
+    # ),
+    long_description=read('README.md'),
+    long_description_content_type='text/markdown',
     author='Dohoon Lee',
     author_email='dohlee.bioinfo@gmail.com',
     url='https://github.com/dohlee/python-snakespit',
@@ -48,13 +50,10 @@ setup(
         'Operating System :: POSIX',
         'Operating System :: Microsoft :: Windows',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: Implementation :: CPython',
-        'Programming Language :: Python :: Implementation :: PyPy',
         # uncomment if you test on these interpreters:
         # 'Programming Language :: Python :: Implementation :: IronPython',
         # 'Programming Language :: Python :: Implementation :: Jython',
@@ -66,6 +65,13 @@ setup(
     ],
     install_requires=[
         # eg: 'aspectlib==1.1.1', 'six>=1.7',
+        'certifi>=2018.4.16',
+        'chardet>=3.0.4',
+        'idna>=2.7',
+        'requests>=2.19.1',
+        'urllib3>=1.23',
+        'tqdm>=4.24.0',
+        'cleanlog>=0.1.4',
     ],
     extras_require={
         # eg:
