@@ -18,10 +18,13 @@ import argparse
 from snakespit import get_rules
 
 parser = argparse.ArgumentParser(description='Get snakemake template rules with ease.')
-parser.add_argument('rules', metavar='rules', nargs=argparse.ZERO_OR_MORE,
-                    help="A name of something.")
+parser.add_argument('tools',
+                    metavar='tools',
+                    nargs='+',
+                    help="Blank-separated names of tools you want to use in the pipeline. (e.g. samtools/sort samtools/index)")
+parser.add_argument('-o', '--output', default=None, help='(Optional) Output file.')
 
 
 def main(args=None):
     args = parser.parse_args(args=args)
-    print(get_rules(args.rules))
+    get_rules(args.tools, args.output)
