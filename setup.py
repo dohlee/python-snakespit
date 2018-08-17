@@ -24,7 +24,7 @@ def read(*names, **kwargs):
 
 setup(
     name='snakespit',
-    version='0.1.1',
+    version='0.1.2',
     license='MIT license',
     description='Get snakemke template rules with ease.',
     # long_description='%s\n%s' % (
